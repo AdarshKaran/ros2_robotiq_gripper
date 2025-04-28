@@ -106,6 +106,9 @@ def generate_launch_description():
             update_rate_config_file,
             initial_joint_controllers,
         ],
+        remappings=[
+            ("~/robot_description", "/robot_description")
+        ],
     )
 
     robot_state_publisher_node = launch_ros.actions.Node(
